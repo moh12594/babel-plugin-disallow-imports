@@ -1,0 +1,30 @@
+# Logs
+logs/
+*.log
+
+# Cache
+.eslintcache
+.idea
+.npm
+.vscode
+.yarnclean
+yarn.lock
+package-lock.json
+
+# Directories
+coverage/
+docs/
+src/
+tests/
+types/
+node_modules/
+
+# Custom
+*.min.js
+*.map
+
+# Configs
+.babelrc
+.eslintignore
+.eslintrc.json
+tsconfig.json
