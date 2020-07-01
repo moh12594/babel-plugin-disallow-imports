@@ -4,19 +4,34 @@
   "description": "Disallow modules to be imported in some files",
   "main": "lib/index.js",
   "scripts": {
+    "lint": "eslint . --ext .ts",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moh12594/babel-plugin-disallow-imports.git"
   },
   "keywords": [
     "babel",
     "babel-plugin",
     "react"
   ],
+  "files": [
+    "lib",
+    "src"
+  ],
+  "bugs": {
+    "url": "https://github.com/moh12594/babel-plugin-disallow-imports/issues"
+  },
   "author": "Mohamed Sadat <mohamed.sadat1995@gmail.com> (https://github.com/moh12594)",
   "license": "MIT",
   "devDependencies": {
     "@babel/preset-typescript": "^7.10.4",
     "@types/babel-core": "^6.25.6",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
