@@ -29,11 +29,12 @@ function shouldThrowError ({
   allowedImporters?: string[],
   filename: string,
 }): boolean {
-  if (!!disallowedImporters && disallowedImporters.some((importer: string) => filename.indexOf(importer) !== -1)) {
+  const isImportDisallowed = Boolean(disallowedImporters) && disallowedImporters?.some((importer: string) => filename.indexOf(importer) !== -1)
+  if (isImportDisallowed) {
     return true
   }
-
-  if (!!allowedImporters && allowedImporters.every((importer: string) => filename.indexOf(importer) < 0)) {
+  const isImportAllowed = Boolean(allowedImporters) && allowedImporters?.every((importer: string) => filename.indexOf(importer) < 0)
+  if (isImportAllowed) {
     return true
   }
 
