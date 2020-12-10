@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-disallow-imports",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Disallow modules to be imported in some files",
   "main": "lib/index.js",
   "scripts": {
